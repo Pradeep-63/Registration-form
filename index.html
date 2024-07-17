@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form  id="form" autocomplete="on">
+        <h2>Registration Form</h2>
+        <div class="content">
+          <div class="form-control">
+            <label for="name">Name:</label>
+            <input type="text" id="name" oninput="myName()" placeholder="Enter name"/>
+            <span id="name-error"></span>
+          </div>
+          <div class="form-control">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter emailId" oninput="myEmail()" />
+            <span></span>
+          </div>
+          <div class="form-control">
+            <label for="contact-number">Contact Number:</label>
+            <input
+              type="text"
+              id="contact-number"
+              placeholder="Enter contactnumber"
+              oninput="myContact()"
+            />
+            <span></span>
+          </div>
+          <div class="form-control">
+            <label for="password">Password:</label>
+            <input type="text" id="password" placeholder="Enter Password" oninput="myPass()" />
+            <span></span>
+          </div>
+          <div class="form-control">
+            <label for="cpassword">Confirm Password:</label>
+            <input
+              type="text"
+              id="cpassword"
+              placeholder="confirm password"
+              oninput="myCpass()"
+            />
+            <span></span>
+          </div>
+
+          <div class="button-container">
+            <input type="submit" value="submit" id="btn" class="btn-value" />
+            <input hidden type="submit" value="update" id="update"  class="btn-value"/>
+            <input type="reset" value="reset" id="reset-btn" class="btn-value"/>
+          </div>
+        </div>
+      </form>
+
+      <table id="usersTable" border="1">
+        <thead>
+            <tr>
+                <th class="col">Name</th>
+                <th class="col">Email</th>
+                <th class="col">Contact Number</th>
+                <th class="col">Password</th>
+                <th class="col">Confirm password</th>
+                <th class="col">Actions button</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- User rows will be added here dynamically -->
+        </tbody>
+    </table>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
